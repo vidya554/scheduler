@@ -18,9 +18,9 @@ var server = http.createServer(function (req, res) {   //create web server
         });
     
     }
-    else if (req.url == '/registration') {
+    else if (req.url == '/schedule') {
         
-        fs.readFile(__dirname + "/pages/views/index.html")
+        fs.readFile(__dirname + "/pages/views/schedule.html")
         .then(contents => {
             res.setHeader("Content-type", "text/html");
             res.writeHead(200);
