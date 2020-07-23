@@ -1,61 +1,21 @@
+const express = require('express');
+const path = require('path');
 
-const http = require('http');
-const fs = require('fs').promises;
+const app = express();
+app.use(express.static('public'));
+app.use(express.static('pages'));
 
-var server = http.createServer(function (req, res) {   //create web server
-    if (req.url == '/') { //check the URL of the current request
-        
-        fs.readFile(__dirname + "/pages/views/index.html")
-        .then(contents => {
-            res.setHeader("Content-type", "text/html");
-            res.writeHead(200);
-            res.end(contents);
-        })
-        .catch(err => {
-            res.writeHead(500);
-            res.end(err);
-            return;
-        });
-    
-    }
-    else if (req.url == '/registration') {
-        
-        fs.readFile(__dirname + "/pages/views/index.html")
-        .then(contents => {
-            res.setHeader("Content-type", "text/html");
-            res.writeHead(200);
-            res.end(contents);
-        })
-        .catch(err => {
-            res.writeHead(500);
-            res.end(err);
-            return;
-        });
-    
-    }
-    else if (req.url == '/about') {
-        
-        fs.readFile(__dirname + "/pages/views/index.html")
-        .then(contents => {
-            res.setHeader("Content-type", "text/html");
-            res.writeHead(200);
-            res.end(contents);
-        })
-        .catch(err => {
-            res.writeHead(500);
-            res.end(err);
-            return;
-        });
-    
-    }
-    else
-        res.end('Invalid Request!');
+// app.use(express.static('assets'));
 
+app.get('/', function(req, res) {
+    res.sendFile(path.join(__dirname, '/pages/views/index.html'));
 });
-const port = 8000;
-const host = 'localhost';
 
+app.get('/schedule', function(req, res) {
+    res.sendFile(path.join(__dirname, '/pages/views/schedule.html'));
+});
+const PORT = 3000;
 
-server.listen(port, host, () => {
-    console.log(`Server is running on http://${host}:${port}`);
+app.listen(PORT, () => {
+console.log("app is running on port: ",PORT)
 });
