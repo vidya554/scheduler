@@ -5,7 +5,6 @@ const app = express();
 app.use(express.static('public'));
 app.use(express.static('pages'));
 
-// app.use(express.static('assets'));
 
 app.get('/', function(req, res) {
     res.sendFile(path.join(__dirname, '/pages/views/index.html'));
