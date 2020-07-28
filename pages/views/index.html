@@ -72,34 +72,59 @@
 
 
     </form>
-    <button onclick="update()">submit</button>
+    <button onclick="formLoad()">submit</button>
 
 
     <script>
+
+ function formLoad(){
+       var formCredentials = {
+
+        firstName : document.getElementById("firstName").value,
+            lastName : document.getElementById("lastName").value,
+            DOB : document.getElementById("dob").value,
+            formEmail : document.getElementById("email").value,
+            city : document.getElementById("city").value,
+            state : document.getElementById("state").value,
+            country : document.getElementById("country").value,
+            zipCode : document.getElementById("zipCode").value
+
+       }
+       console.log(formCredentials)
+    }
+
+      
+
         //form validation
 
 
-        function update() {
+        // function update() {
 
-            var firstName, lastName, DOB, formEmail, city
+        //     var firstName, lastName, DOB, formEmail, city
 
-                , state, country, zipCode;
+        //         , state, country, zipCode;
 
-            firstName = document.getElementById("firstName").value;
-            lastName = document.getElementById("lastName").value;
-            DOB = document.getElementById("dob").value;
-            formEmail = document.getElementById("email").value;
-            city = document.getElementById("city").value;
-            state = document.getElementById("state").value;
-            country = document.getElementById("country").value;
-            zipCode = document.getElementById("zipCode").value;
+        //     firstName = document.getElementById("firstName").value;
+        //     lastName = document.getElementById("lastName").value;
+        //     DOB = document.getElementById("dob").value;
+        //     formEmail = document.getElementById("email").value;
+        //     city = document.getElementById("city").value;
+        //     state = document.getElementById("state").value;
+        //     country = document.getElementById("country").value;
+        //     zipCode = document.getElementById("zipCode").value;
 
-            console.log(firstName, lastName, DOB, formEmail, city
+        //     console.log(firstName, lastName, DOB, formEmail, city
 
-                , state, country, zipCode)
+        //         , state, country, zipCode)
 
 
-        }
+        // }
+
+   
+     
+         
+
+
 
 
 // specify index of elements to delete
@@ -120,7 +145,7 @@
             }
 
         }
-        
+
         // function call
 
         arraydeleter(4)
@@ -133,10 +158,10 @@
 
         var games = ["cricket", "hockey", "football", "golf", "basketball", "vollyball"]
 
-        // console.log(games)
+        console.log(games)
 
-        // games.splice(2, 2)
-        // console.log(games)
+        games.splice(2, 2)
+        console.log(games)
     </script>
 
 </body>
