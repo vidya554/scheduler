@@ -2,56 +2,117 @@
 <html lang="en">
 
 <head>
+    <style>
+        .form-elements{
+          margin-bottom: 28px;
+        }
+  
+    </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>js trials</title>
+    <title>index</title>
 
 </head>
 
 <body>
 
+    <!-- form -->
 
-    <h2 id="p-1"></h2>
-    <h2 id="p-2"></h2>
-    <h2 id="p-3"></h2>
+    <form  >
+
+        <div class="form-elements">
+
+            <label for="firstName">First Name</label>
+            <input required type="text" name="firstName" id="firstName">
+
+        </div>
+
+        <div class="form-elements">
+            <label for="lastName">last Name</label>
+            <input required type="text" name="lastName" id="lastName">
+
+        </div>
+
+        <div class="form-elements">
+            <label for="DOB">Date of birth</label>
+            <input required type="date" name="DOB" id="dob" >
+
+        </div>
+
+
+        <div class="form-elements">
+            <label for="email" required>Email</label>
+            <input required type="email" name="email" id="email" >
+
+        </div>
+
+
+        <div class="form-elements">
+            <label for="adress">Address</label>
+
+            <input  required placeholder="city" type="address" id="city" >
+            <input required placeholder="state" type="address"  id="state">
+            <input required placeholder="country" type="address" id="country" >
+
+        </div>
+
+        <div class="form-elements">
+
+            <label for="zipCode">ZIP code:</label>
+            <input type="number" name="zipCode" id="zipCode">
+
+        </div>
+
+        <div class="form-elements">
+           
+          
+
+        </div>
+
+
+
+
+    </form>
+    <button onclick="update()">submit</button>
+    
+
     <script>
-        //    1.program to identify a odd or even Number
-        //    2.program to identify a positive or negative number
-        //   3.program to identify a positive and even number
 
-        var x = 4
+//form validation
 
-        if (x % 2 == 0) {
-            document.getElementById("p-1").innerHTML = "Even number"
-        } else {
-            document.getElementById("p-1").innerHTML = "Odd number"
-        };
 
-        //    2.program to identify a positive or negative number
+function update(){
 
-        var y = 2
+    var firstName , lastName, DOB , formEmail, city
 
-        if (y > 0) {
-            document.getElementById("p-2").innerHTML = "positive number";
+    , state, country, zipCode;
 
-        } else if (y == 0) {
-            document.getElementById("p-2").innerHTML = "Not positive not negative"
-        } else {
-            document.getElementById("p-2").innerHTML = "negative number"
-        }
+    firstName =  document.getElementById("firstName").value;
+    lastName =   document.getElementById("lastName").value;
+    DOB =        document.getElementById("dob").value;
+    formEmail =  document.getElementById("email").value;
+    city =       document.getElementById("city").value;
+    state =      document.getElementById("state").value;
+    country =    document.getElementById("country").value;
+    zipCode =    document.getElementById("zipCode").value;
 
-        //   3.program to identify a positive and even number
+    console.log(firstName , lastName, DOB , formEmail, city
 
-        var a = 3
+, state, country, zipCode)
 
-        if (a > 0 && a % 2 == 0) {
-            document.getElementById("p-3").innerHTML = "positive and even number"
-        } else if (a % 2 == !0) {
-            document.getElementById("p-3").innerHTML = "Odd number"
-        } else {
-            document.getElementById("p-3").innerHTML = "negative number"
-        }
+
+}
+
+
+
+
+
+
+
+
+
     </script>
+
 </body>
 
 </html>
