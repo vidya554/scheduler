@@ -1,11 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scheduler</title>
+    <title>js trials</title>
+
 </head>
+
 <body>
-    <div>This is my HTML Page</div>
+
+
+    <h2 id="p-1"></h2>
+    <h2 id="p-2"></h2>
+    <h2 id="p-3"></h2>
+    <script>
+        //    1.program to identify a odd or even Number
+        //    2.program to identify a positive or negative number
+        //   3.program to identify a positive and even number
+
+        var x = 4
+
+        if (x % 2 == 0) {
+            document.getElementById("p-1").innerHTML = "Even number"
+        } else {
+            document.getElementById("p-1").innerHTML = "Odd number"
+        };
+
+        //    2.program to identify a positive or negative number
+
+        var y = 2
+
+        if (y > 0) {
+            document.getElementById("p-2").innerHTML = "positive number";
+
+        } else if (y == 0) {
+            document.getElementById("p-2").innerHTML = "Not positive not negative"
+        } else {
+            document.getElementById("p-2").innerHTML = "negative number"
+        }
+
+        //   3.program to identify a positive and even number
+
+        var a = 3
+
+        if (a > 0 && a % 2 == 0) {
+            document.getElementById("p-3").innerHTML = "positive and even number"
+        } else if (a % 2 == !0) {
+            document.getElementById("p-3").innerHTML = "Odd number"
+        } else {
+            document.getElementById("p-3").innerHTML = "negative number"
+        }
+    </script>
 </body>
+
 </html>
