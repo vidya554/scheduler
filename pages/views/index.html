@@ -3,10 +3,9 @@
 
 <head>
     <style>
-        .form-elements{
-          margin-bottom: 28px;
+        .form-elements {
+            margin-bottom: 28px;
         }
-  
     </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,7 +17,7 @@
 
     <!-- form -->
 
-    <form  >
+    <form>
 
         <div class="form-elements">
 
@@ -35,14 +34,14 @@
 
         <div class="form-elements">
             <label for="DOB">Date of birth</label>
-            <input required type="date" name="DOB" id="dob" >
+            <input required type="date" name="DOB" id="dob">
 
         </div>
 
 
         <div class="form-elements">
             <label for="email" required>Email</label>
-            <input required type="email" name="email" id="email" >
+            <input required type="email" name="email" id="email">
 
         </div>
 
@@ -50,9 +49,9 @@
         <div class="form-elements">
             <label for="adress">Address</label>
 
-            <input  required placeholder="city" type="address" id="city" >
-            <input required placeholder="state" type="address"  id="state">
-            <input required placeholder="country" type="address" id="country" >
+            <input required placeholder="city" type="address" id="city">
+            <input required placeholder="state" type="address" id="state">
+            <input required placeholder="country" type="address" id="country">
 
         </div>
 
@@ -64,8 +63,8 @@
         </div>
 
         <div class="form-elements">
-           
-          
+
+
 
         </div>
 
@@ -74,34 +73,57 @@
 
     </form>
     <button onclick="update()">submit</button>
-    
+
 
     <script>
-
-//form validation
-
-
-function update(){
-
-    var firstName , lastName, DOB , formEmail, city
-
-    , state, country, zipCode;
-
-    firstName =  document.getElementById("firstName").value;
-    lastName =   document.getElementById("lastName").value;
-    DOB =        document.getElementById("dob").value;
-    formEmail =  document.getElementById("email").value;
-    city =       document.getElementById("city").value;
-    state =      document.getElementById("state").value;
-    country =    document.getElementById("country").value;
-    zipCode =    document.getElementById("zipCode").value;
-
-    console.log(firstName , lastName, DOB , formEmail, city
-
-, state, country, zipCode)
+        //form validation
 
 
-}
+        function update() {
+
+            var firstName, lastName, DOB, formEmail, city
+
+                , state, country, zipCode;
+
+            firstName = document.getElementById("firstName").value;
+            lastName = document.getElementById("lastName").value;
+            DOB = document.getElementById("dob").value;
+            formEmail = document.getElementById("email").value;
+            city = document.getElementById("city").value;
+            state = document.getElementById("state").value;
+            country = document.getElementById("country").value;
+            zipCode = document.getElementById("zipCode").value;
+
+            console.log(firstName, lastName, DOB, formEmail, city
+
+                , state, country, zipCode)
+
+
+        }
+
+
+// specify index of elements to delete
+
+        function arraydeleter(num) {
+            var cars = ["suzuki", "hundai", "skoda", "BMW", "volvo"]
+
+            if (num > 4) {
+                console.log("greater then the array length")
+
+            } else {
+               
+                console.log(cars)
+                cars.splice(num, 1)
+
+                console.log(cars)
+
+            }
+
+        }
+        
+        // function call
+
+        arraydeleter(4)
 
 
 
@@ -109,8 +131,12 @@ function update(){
 
 
 
+        var games = ["cricket", "hockey", "football", "golf", "basketball", "vollyball"]
 
+        // console.log(games)
 
+        // games.splice(2, 2)
+        // console.log(games)
     </script>
 
 </body>
